@@ -10,10 +10,11 @@
 			http://www.springframework.org/schema/data/jpa
 			http://www.springframework.org/schema/data/jpa/spring-jpa-1.2.xsd">
 
-	<import resource="classpath:/spring/module-repository-context.xml" />
+	<!-- load des dependency global -->
+	<import resource="classpath:/spring/sapi-repository-context.xml" />
 
-	<jpa:repositories base-package="fr.socgen.sis.aga.domain.repository" entity-manager-factory-ref="entityManagerFactory" />
+	<jpa:repositories base-package="demo.sapi.repository" entity-manager-factory-ref="entityManagerFactory" />
 
-	<context:component-scan base-package="fr.socgen.sis.aga.domain.repository" />
+	<context:component-scan base-package="demo.sapi.repository" />
 
 </beans>

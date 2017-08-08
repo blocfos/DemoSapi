@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v201405191524 Build &lt;4.4.0.v20140606-1451></property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">odaDriverClass</property>
+            <property name="id">7</property>
+            <expression name="value" type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("jdbcDriver")</expression>
+        </structure>
+        <structure>
+            <property name="name">odaURL</property>
+            <property name="id">7</property>
+            <expression name="value" type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("datasourceUrl")</expression>
+        </structure>
+        <structure>
+            <property name="name">odaUser</property>
+            <property name="id">7</property>
+            <expression name="value" type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("user")</expression>
+        </structure>
+        <structure>
+            <property name="name">odaPassword</property>
+            <property name="id">7</property>
+            <expression name="value" type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("password")</expression>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="niveau5" id="245">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("niveau5")</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="listNiveau4" id="246">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("niveau4display")</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="listNiveau3" id="247">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("niveau3display")</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="listNiveau5" id="1793">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("niveau5")</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="7">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+            <property name="odaURL">jdbc:mysql://isis.java.nsit:3306</property>
+            <property name="odaUser">sis-user</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">c2hsb2F0YWQ1</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set1" id="81">
+            <list-property name="columnHints"/>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">-1</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("keyDecrypt")</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">niveau5</property>
+                    <property name="paramName">niveau5</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">-1</property>
+                    <property name="position">2</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">niveau2</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">-1</property>
+                    <property name="position">3</property>
+                    <expression name="defaultValue" type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("niveau2")</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">niveau1</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">-1</property>
+                    <property name="position">4</property>
+                    <expression name="defaultValue" type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("niveau1")</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">niveau0</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">-1</property>
+                    <property name="position">5</property>
+                    <expression name="defaultValue" type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("niveau0")</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">opetator</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">-1</property>
+                    <property name="position">6</property>
+                    <expression name="defaultValue" type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("operator")</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">etat</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">-1</property>
+                    <property name="position">7</property>
+                    <expression name="defaultValue" type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("etat")</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">type</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">-1</property>
+                    <property name="position">8</property>
+                    <expression name="defaultValue" type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("type")</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">period_du</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">-1</property>
+                    <property name="position">9</property>
+                    <expression name="defaultValue" type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("periode_du")</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">period_au</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">-1</property>
+                    <property name="position">10</property>
+                    <expression name="defaultValue" type="javascript">reportContext.getHttpServletRequest().getSession().getAttribute("periode_au")</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData"/>
+            <method name="beforeOpen"><![CDATA[this.queryText=this.queryText.replaceAll("listNiveau5param",params["listNiveau5"].value);this.queryText=this.queryText.replaceAll("listNiveau4param",params["listNiveau4"].value); this.queryText=this.queryText.replaceAll("listNiveau3param",params["listNiveau3"].value);]]></method>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet"/>
+            <xml-property name="queryText"><![CDATA[select bud4.sigle,bud4.domaine, count(distinct  CAST(AES_DECRYPT(tel_mobile.NUMAPPEL, ?) AS CHAR(50))) AS NL,
+	SUM(tel_mobile.Total_fac) AS MD,
+	AVG(tel_mobile.Total_fac) AS CL,
+	SUM(tel_mobile.Total_SMS) AS dont_SMS,
+	SUM(tel_mobile.Total_National) AS dont_National,
+	SUM(tel_mobile.Total_NumSpeciaux) AS dont_Num_spec, 
+	SUM(tel_mobile.Total_Roaming_Sortant) AS dont_Roaming_sortant,
+	SUM(tel_mobile.Total_Roaming_Entrant) AS dont_Roaming_entrant, 
+	SUM(tel_mobile.Total_Data) AS dont_Data, 
+	SUM(tel_mobile.Total_Abo) AS dont_Abonnement,
+   year(tel_mobile.date_fac)
+from `sis-common`.`StructureBudgetaire` bud4
+inner join `sis-common`.`StructureBudgetaire` bud5 on bud4.branche = bud5.CodeES
+inner join `sis-common`.`StructureBudgetaire` bud3 on bud4.CodeES = bud3.domaine
+inner join `sis-common`.`StructureBudgetaire` bud2 on bud2.niveau3 = bud3.CodeES
+inner join `sis-common`.`StructureBudgetaire` bud1 on bud2.CodeES = bud1.niveau2
+inner join `sis-common`.`StructureBudgetaire` bud0 on bud0.centreBudgetaire = bud1.CodeES
+LEFT OUTER JOIN `sis-aga`.`TEL_MOBILE` tel_mobile ON bud0.CodeES = tel_mobile.IDNIVEAU0
+where bud5.branche is not null and  (bud5.dateFinValidite IS NULL OR bud5.dateFinValidite >= CURDATE()) and  bud5.domaine is null 
+and  bud4.domaine is not null and  (bud4.dateFinValidite IS NULL OR bud4.dateFinValidite >= CURDATE()) and  bud4.niveau3 is null
+and  bud3.niveau3 is not null and  (bud3.dateFinValidite IS NULL OR bud3.dateFinValidite >= CURDATE()) and  bud3.niveau2 is null
+and  bud2.niveau2 is not null and  (bud2.dateFinValidite IS NULL OR bud2.dateFinValidite >= CURDATE()) and  bud2.centreBudgetaire is null
+and  bud1.centreBudgetaire is not null and  (bud1.dateFinValidite IS NULL OR bud1.dateFinValidite >= CURDATE()) and  bud1.CENTREACTIVITE is null
+and  bud0.CodeES is not null and  (bud0.dateFinValidite IS NULL OR bud0.dateFinValidite >= CURDATE()) 
+and bud5.sigle like ?
+and bud5.branche in (listNiveau5param)
+and bud4.domaine in (listNiveau4param)
+and bud3.niveau3 in (listNiveau3param) 
+and bud2.niveau2 like ?
+and bud1.centreBudgetaire like ?
+and bud0.centreActivite like ?
+and tel_mobile.Operateur like ?
+and tel_mobile.Etat_Lignetel like ?
+and tel_mobile.Typo_Effco like ?
+and tel_mobile.date_fac >= ? and tel_mobile.date_fac <= ?
+GROUP BY bud4.sigle ]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-1</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-1</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>3</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-1</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>4</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-1</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>5</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-1</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>6</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-1</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>7</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-1</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>8</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>-1</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">landscape</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <text id="1805">
+            <property name="fontFamily">"Arial"</property>
+            <property name="fontSize">14pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="marginLeft">5pt</property>
+            <property name="textAlign">left</property>
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[Bench Groupe de 
+<VALUE-OF>
+if(reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString") != null)
+{	
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(0,2) == '01'){
+		"Janvier " + reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(0,2) == '02'){
+		"Février " + reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(0,2) == '03'){
+		"Mars " + reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(0,2) == '04'){
+		"Avril " + reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(0,2) == '05'){
+		"Mai " + reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(0,2) == '06'){
+		"Juin " + reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(0,2) == '07'){
+		"Juillet " + reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(0,2) == '08'){
+		"Août " + reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(0,2) == '09'){
+		"Septembre " + reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(0,2) == '10'){
+		"Octobre " + reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(0,2) == '11'){
+		"Novembre " + reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(0,2) == '12'){
+		"Décembre " + reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString").substring(3,7)
+	}
+	
+	
+}
+
+</VALUE-OF>
+   
+<VALUE-OF>
+if(reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString") != null)
+{	
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(0,2) == '01'){
+		"&amp;nbsp;à Janvier " + reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(0,2) == '02'){
+		"&amp;nbsp;à  Février " + reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(0,2) == '03'){
+		"&amp;nbsp;à  Mars " + reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(0,2) == '04'){
+		"&amp;nbsp;à Avril " + reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(0,2) == '05'){
+		"&amp;nbsp;à Mai " + reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(0,2) == '06'){
+		"&amp;nbsp;à Juin " + reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(0,2) == '07'){
+		"&amp;nbsp;à Juillet " + reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(0,2) == '08'){
+		"&amp;nbsp;à Août " + reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(0,2) == '09'){
+		"&amp;nbsp;à Septembre " + reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(0,2) == '10'){
+		"&amp;nbsp;à Octobre " + reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(0,2) == '11'){
+		"&amp;nbsp;à Novembre " + reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(3,7)
+	}
+	if(reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(0,2) == '12'){
+		"&amp;nbsp;à Décembre " + reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString").substring(3,7)
+	}
+	
+	
+}
+
+</VALUE-OF>]]></text-property>
+        </text>
+        <text id="356">
+            <property name="fontFamily">"Arial"</property>
+            <property name="fontSize">12pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="marginTop">10pt</property>
+            <property name="marginLeft">5pt</property>
+            <property name="textAlign">left</property>
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<VALUE-OF>
+"Niveau 5 : " + 
+	params["niveau5"].value	 + "&amp;nbsp;"
+</VALUE-OF>
+
+<VALUE-OF>
+if(reportContext.getHttpServletRequest().getSession().getAttribute("operator") != '%')
+{
+	 " | Opérateur : " + 
+	reportContext.getHttpServletRequest().getSession().getAttribute("operator")+ "&amp;nbsp;"
+}
+
+</VALUE-OF>
+<VALUE-OF>
+if(reportContext.getHttpServletRequest().getSession().getAttribute("etat") != '%')
+{
+	 " | Statut de la ligne : " + 
+	reportContext.getHttpServletRequest().getSession().getAttribute("etat")+ "&amp;nbsp;"
+}
+
+</VALUE-OF>
+<VALUE-OF>
+if(reportContext.getHttpServletRequest().getSession().getAttribute("type") != '%')
+{
+	 " | Type de matériel : " + 
+	reportContext.getHttpServletRequest().getSession().getAttribute("type")+ "&amp;nbsp;"
+}
+
+</VALUE-OF>
+
+ | Du :
+<VALUE-OF>
+if(reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString") != null)
+{
+	reportContext.getHttpServletRequest().getSession().getAttribute("dateStartString")+ "&amp;nbsp;"
+}
+
+</VALUE-OF>
+  
+  <VALUE-OF>
+if(reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString") != null)
+{
+	 "  | Au : " + 
+	reportContext.getHttpServletRequest().getSession().getAttribute("dateEndString")+ "&amp;nbsp;"
+}
+
+</VALUE-OF>
+
+]]></text-property>
+        </text>
+        <text id="1789">
+            <property name="fontFamily">"Verdana"</property>
+            <property name="fontSize">9pt</property>
+            <property name="color">#0080FF</property>
+            <property name="marginLeft">5pt</property>
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<a href="reports?ReportName=consom_bench_group_nv5.rptdesign" >Retour</a>]]></text-property>
+        </text>
+        <table id="8">
+            <property name="borderBottomColor">#C0C0C0</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">thin</property>
+            <property name="borderLeftColor">#C0C0C0</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">thin</property>
+            <property name="borderRightColor">#C0C0C0</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">thin</property>
+            <property name="borderTopColor">#C0C0C0</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">thin</property>
+            <property name="marginTop">5pt</property>
+            <property name="marginLeft">5pt</property>
+            <property name="marginBottom">5pt</property>
+            <property name="width">10.395833333333334in</property>
+            <property name="dataSet">Data Set1</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">sigle</property>
+                    <text-property name="displayName">sigle</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["sigle"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">NL</property>
+                    <text-property name="displayName">NL</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NL"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">MD</property>
+                    <text-property name="displayName">MD</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MD"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">CL</property>
+                    <text-property name="displayName">CL</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CL"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">dont_SMS</property>
+                    <text-property name="displayName">dont_SMS</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["dont_SMS"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">dont_National</property>
+                    <text-property name="displayName">dont_National</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["dont_National"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">dont_Num_spec</property>
+                    <text-property name="displayName">dont_Num_spec</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["dont_Num_spec"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">dont_Roaming_sortant</property>
+                    <text-property name="displayName">dont_Roaming_sortant</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["dont_Roaming_sortant"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">dont_Roaming_entrant</property>
+                    <text-property name="displayName">dont_Roaming_entrant</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["dont_Roaming_entrant"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">dont_Data</property>
+                    <text-property name="displayName">dont_Data</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["dont_Data"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">dont_Abonnement</property>
+                    <text-property name="displayName">dont_Abonnement</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["dont_Abonnement"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <expression name="expression" type="javascript">dataSetRow["domaine"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">domain</property>
+                    <expression name="expression" type="javascript">dataSetRow["domaine"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="45">
+                <property name="width">1.7291666666666667in</property>
+            </column>
+            <column id="1803">
+                <list-property name="visibility">
+                    <structure>
+                        <property name="format">all</property>
+                        <expression name="valueExpr" type="javascript">true</expression>
+                    </structure>
+                </list-property>
+                <property name="width">0.010416666666666666in</property>
+            </column>
+            <column id="46">
+                <property name="width">0.7604166666666666in</property>
+            </column>
+            <column id="47">
+                <property name="width">0.84375in</property>
+            </column>
+            <column id="48">
+                <property name="width">0.7291666666666666in</property>
+            </column>
+            <column id="49">
+                <property name="width">0.8020833333333334in</property>
+            </column>
+            <column id="50">
+                <property name="width">0.84375in</property>
+            </column>
+            <column id="51">
+                <property name="width">0.8854166666666666in</property>
+            </column>
+            <column id="52">
+                <property name="width">1.03125in</property>
+            </column>
+            <column id="53">
+                <property name="width">0.90625in</property>
+            </column>
+            <column id="54">
+                <property name="width">0.7395833333333334in</property>
+            </column>
+            <column id="55">
+                <property name="width">1.1145833333333333in</property>
+            </column>
+            <header>
+                <row id="9">
+                    <cell id="10">
+                        <property name="colSpan">1</property>
+                        <property name="rowSpan">2</property>
+                        <property name="backgroundColor">#0080FF</property>
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="verticalAlign">middle</property>
+                        <text id="56">
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#FFFFFF</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Pôle 
+d'activité]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="1800">
+                        <property name="backgroundColor">#0080FF</property>
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                    </cell>
+                    <cell id="11">
+                        <property name="colSpan">1</property>
+                        <property name="rowSpan">2</property>
+                        <property name="backgroundColor">#0080FF</property>
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="verticalAlign">middle</property>
+                        <text id="57">
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#FFFFFF</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Nombre de 
+lignes]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="12">
+                        <property name="colSpan">1</property>
+                        <property name="rowSpan">2</property>
+                        <property name="backgroundColor">#0080FF</property>
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="verticalAlign">middle</property>
+                        <text id="58">
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#FFFFFF</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Montant 
+des 
+dépenses]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="13">
+                        <property name="colSpan">1</property>
+                        <property name="rowSpan">2</property>
+                        <property name="backgroundColor">#0080FF</property>
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="verticalAlign">middle</property>
+                        <text id="59">
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#FFFFFF</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Coût d'une 
+ligne]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="14">
+                        <property name="colSpan">7</property>
+                        <property name="rowSpan">1</property>
+                        <property name="backgroundColor">#0080FF</property>
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <text id="72">
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#FFFFFF</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Dont]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="60">
+                    <property name="height">0.4791666666666667in</property>
+                    <cell id="1801">
+                        <property name="backgroundColor">#0080FF</property>
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                    </cell>
+                    <cell id="65">
+                        <property name="backgroundColor">#8FBFEF</property>
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="verticalAlign">middle</property>
+                        <text id="73">
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#FFFFFF</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[SMS]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="66">
+                        <property name="backgroundColor">#8FBFEF</property>
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="verticalAlign">middle</property>
+                        <text id="75">
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#FFFFFF</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[National]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="67">
+                        <property name="backgroundColor">#8FBFEF</property>
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <text id="76">
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#FFFFFF</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Numéros 
+speciaux]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="68">
+                        <property name="backgroundColor">#8FBFEF</property>
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <text id="77">
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#FFFFFF</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Roaming 
+sortant]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="69">
+                        <property name="backgroundColor">#8FBFEF</property>
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <text id="78">
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#FFFFFF</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Roaming 
+entrant]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="70">
+                        <property name="backgroundColor">#8FBFEF</property>
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="verticalAlign">middle</property>
+                        <text id="79">
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#FFFFFF</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Data]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="71">
+                        <property name="backgroundColor">#8FBFEF</property>
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="verticalAlign">middle</property>
+                        <text id="80">
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#FFFFFF</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Abonnement]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="21">
+                    <cell id="22">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="82">
+                            <property name="fontSize">9pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="resultSetColumn">sigle</property>
+                            <list-property name="action">
+                                <structure>
+                                    <property name="linkType">hyperlink</property>
+                                    <expression name="uri" type="javascript">var nv4 = params["listNiveau4"].value;&#13;
+var domain = row["domain"];&#13;
+if(nv4.indexOf(domain) != -1){&#13;
+"reports?ReportName=consom_bench_group_nv3.rptdesign" + "&amp;niveau5=" + params["niveau5"].value+ "&amp;niveau4=" + row["sigle"] + "&amp;domaine=" + domain&#13;
+}</expression>
+                                    <property name="targetWindow">_parent</property>
+                                </structure>
+                            </list-property>
+                        </data>
+                    </cell>
+                    <cell id="1802">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="1804">
+                            <property name="resultSetColumn">domain</property>
+                        </data>
+                    </cell>
+                    <cell id="23">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="83">
+                            <property name="fontSize">9pt</property>
+                            <structure name="numberFormat">
+                                <property name="category">Fixed</property>
+                                <property name="pattern">#,##0{RoundingMode=HALF_UP}</property>
+                                <property name="locale">fr</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">NL</property>
+                        </data>
+                    </cell>
+                    <cell id="24">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="84">
+                            <property name="fontSize">9pt</property>
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">#,##0 €{RoundingMode=HALF_UP}</property>
+                                <property name="locale">fr</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">MD</property>
+                        </data>
+                    </cell>
+                    <cell id="25">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="85">
+                            <property name="fontSize">9pt</property>
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">#,##0 €{RoundingMode=HALF_UP}</property>
+                                <property name="locale">fr</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">CL</property>
+                        </data>
+                    </cell>
+                    <cell id="26">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="86">
+                            <property name="fontSize">9pt</property>
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">#,##0 €{RoundingMode=HALF_UP}</property>
+                                <property name="locale">fr</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">dont_SMS</property>
+                        </data>
+                    </cell>
+                    <cell id="27">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="87">
+                            <property name="fontSize">9pt</property>
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">#,##0 €{RoundingMode=HALF_UP}</property>
+                                <property name="locale">fr</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">dont_National</property>
+                        </data>
+                    </cell>
+                    <cell id="28">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="88">
+                            <property name="fontSize">9pt</property>
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">#,##0 €{RoundingMode=HALF_UP}</property>
+                                <property name="locale">fr</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">dont_Num_spec</property>
+                        </data>
+                    </cell>
+                    <cell id="29">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="89">
+                            <property name="fontSize">9pt</property>
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">#,##0 €{RoundingMode=HALF_UP}</property>
+                                <property name="locale">fr</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">dont_Roaming_sortant</property>
+                        </data>
+                    </cell>
+                    <cell id="30">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="90">
+                            <property name="fontSize">9pt</property>
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">#,##0 €{RoundingMode=HALF_UP}</property>
+                                <property name="locale">fr</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">dont_Roaming_entrant</property>
+                        </data>
+                    </cell>
+                    <cell id="31">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="91">
+                            <property name="fontSize">9pt</property>
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">#,##0 €{RoundingMode=HALF_UP}</property>
+                                <property name="locale">fr</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">dont_Data</property>
+                        </data>
+                    </cell>
+                    <cell id="32">
+                        <property name="borderBottomColor">#C0C0C0</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#C0C0C0</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#C0C0C0</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#C0C0C0</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="92">
+                            <property name="fontSize">9pt</property>
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">#,##0 €{RoundingMode=HALF_UP}</property>
+                                <property name="locale">fr</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">dont_Abonnement</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+</report>

@@ -1,30 +1,45 @@
 package demo.sapi.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import fr.socgen.sis.aga.service.notice.ModuleNoticeService;
+import fr.socgen.sis.common.web.AbstractSisController;
 
 /**
- * Sample controller for going to the home page with a message
+ * 
+ * @author Lam NGUYEN
+ * 
  */
 @Controller
-public class HomeController {
+@RequestMapping("/")
+public class HomeController extends AbstractSisController {
 
-	private static final Logger logger = LoggerFactory
-			.getLogger(HomeController.class);
+    @Value("${module.code}")
+    private String moduleCode;
 
-	/**
-	 * Selects the home page and populates the model with a message
-	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Model model) {
-		logger.info("Welcome home!");
-		model.addAttribute("controllerMessage",
-				"This is the message from the controller!");
-		return "home";
-	}
+    @Autowired
+    private ModuleNoticeService moduleNoticeService;
 
+    @RequestMapping
+    public String home(HttpServletRequest request) {
+        if (request.getSession()
+                .getAttribute(ModuleAttributeKeys.NOTICE_EXISTS) == null) {
+            final Boolean noticeExists = moduleNoticeService
+                    .existsNoticeByCode(moduleCode);
+            request.getSession().setAttribute(
+                    ModuleAttributeKeys.NOTICE_EXISTS, noticeExists);
+        }
+        return redirect(request, ModuleViews.URL_HOME, true);
+    }
+
+    @RequestMapping("index")
+    public ModelAndView index() {
+        return new ModelAndView("index");
+    }
 }
