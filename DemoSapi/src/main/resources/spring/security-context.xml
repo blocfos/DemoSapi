@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:sec="http://www.springframework.org/schema/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+			http://www.springframework.org/schema/security
+			http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<import resource="classpath:/spring/module-security-context.xml" />
+	<import resource="classpath:/spring/sapi-common-security-context.xml" />
+
+	<sec:http pattern="/webcontent/**" security="none" />
+	<sec:http pattern="/aga/webcontent/**" security="none" />
+
+	<sec:http pattern="/**" use-expressions="true" entry-point-ref="moduleEntryPoint">
+		<sec:intercept-url pattern="/administration/batch/launcher/**" access="hasAnyRole('ADMIN','AGA_ADMIN')" />
+		<sec:intercept-url pattern="/administration/**" access="hasAnyRole('ADMIN','AGA_ADMIN')" />
+		<sec:intercept-url pattern="/**" access="hasAnyRole('ADMIN','AGA_ADMIN','AGA_CDG','AGA_USER')" />
+		<sec:custom-filter ref="sapiModuleFilter" position="BASIC_AUTH_FILTER" />
+		<sec:custom-filter ref="agaFilter" after="BASIC_AUTH_FILTER" />
+		<sec:custom-filter ref="ajaxTimeoutCatcherFilter" after="EXCEPTION_TRANSLATION_FILTER" />
+	</sec:http>
+</beans>

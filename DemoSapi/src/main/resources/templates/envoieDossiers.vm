@@ -1,0 +1,18 @@
+<html>
+	<body>
+		<div>
+			<p style="font-weight:bold;text-align:center">
+				Ce message est envoyé automatiquement, merci de ne pas y répondre.
+			</p>
+			Bonjour
+			<br/><br/>
+			#if (!$empty)
+				Vous trouverez ci-joint la liste des dossiers #if (!$decaisse) clôturés #else décaissés #end le mois dernier.
+			#else
+				Aucun dossier n’a été #if (!$decaisse) clôturé #else décaissé #end ce mois-ci.
+			#end
+			<br/><br/>
+			Cordialement
+		</div>
+	</body>
+</html>
